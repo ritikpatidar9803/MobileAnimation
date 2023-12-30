@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    line-height: normal;
+}
+
+.wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+main .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: linear-gradient(180deg, #082746 8.85%, #FF9330 75.58%);
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    transition: all 5s linear;
+
+}
+
+main .content img {
+    position: absolute;
+    width: 100%;
+    transition: all 2s ease-in;
+}
+
+main .content img:nth-child(1) {
+    bottom: 0;
+    z-index: 15;
+}
+
+main .content img:nth-child(2) {
+    bottom: 45px;
+    z-index: 14;
+}
+
+main .content img:nth-child(3) {
+    bottom: 0;
+    z-index: 13;
+}
+
+main .content img:nth-child(4) {
+    bottom: 0;
+    z-index: 12;
+}
+
+main .content img:nth-child(5) {
+    bottom: 12px;
+    z-index: 11;
+}
+
+main .content.active img:nth-child(5) {
+    bottom: 86px;
+}
+
+main .content img:nth-child(6) {
+    bottom: 58px;
+    z-index: 10;
+}
+
+main .content.active img:nth-child(6) {
+    bottom: 167px;
+}
+
+main .content img:nth-child(7) {
+    bottom: 75px;
+    z-index: 9;
+}
+
+main .content.active img:nth-child(7) {
+    bottom: 185px;
+}
+
+main .content img:nth-child(8) {
+    bottom: 119px;
+    z-index: 8;
+}
+
+main .content.active img:nth-child(8) {
+    bottom: 264px;
+}
+
+main .content img:nth-child(9) {
+    bottom: 0;
+    z-index: 7;
+}
+
+main .content.active img:nth-child(9) {
+    bottom: 380px;
+}
+
+main .content img:nth-child(10) {
+    bottom: 0;
+    width: 50%;
+    z-index: 11;
+}
+
+main .content.active img:nth-child(10) {
+    bottom: 180px;
+}
+
+main .content svg {
+    position: absolute;
+    bottom: -10px;
+    z-index: 11;
+    width: 130px;
+    height: 130px;
+    fill: #FF902B;
+    filter: blur(13px);
+    transition: all 2s ease-in;
+    opacity: 0;
+}
+
+main .content.active {
+    background: #C6E2FF;
+}
+
+main .content.evening {
+    background: linear-gradient(180deg, #0B2E52 0%, #FF7121 76.39%);
+}
+
+main .content.night {
+    background: linear-gradient(180deg, #000102 22.38%, #0B2E52 100%);
+}
+
+main .content.active .sun{
+    bottom: 511px;
+    opacity: 1;
+}
+
+main .content.evening .sun {
+    bottom: 251px;
+    z-index: 20;
+    opacity: 1;
+}
+main .content.night .moon {
+    fill: #FF902B;
+    filter: blur(8px);
+    bottom: 511px;
+    opacity: 1;
+}
+
+main .content h2 {
+    color: #FFF;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 12;
+    bottom: 0;
+    transition: all 2s ease-in;
+    opacity: 0;
+}
+
+main .content.active h2.g-morning {
+    bottom: 350px;
+    opacity: 1;
+}
+
+main .content.evening h2.g-evening {
+    bottom: 450px;
+    opacity: 1;
+}
+
+main .content.night h2.g-night {
+    bottom: 350px;
+    opacity: 1;
+}
+
+@media (min-width:450px) {
+    main {
+        border: solid 25px #231f1fd7;
+        border-radius: 75px;
+        max-height: 810px;
+    }
+
+    body {
+        padding-top: 2vh;
+    }
+}
